@@ -1,0 +1,58 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        table,th,td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <a href = '/'><h3>Home</h3></a>
+    <a href = '/newbook'><h3>Add new book</h3></a> 
+        <a href = '/getbooks'><h3>List all the books</h3></a>
+        <a href = '/updatebook'><h3>Update a book's properties</h3></a>
+        <a href = '/deletebook'><h3>Delete a book using it's ISBN</h3></a>
+        <a href = '/newauthor'><h3>Add a new author</h3></a>
+        <a href = '/getauthors'><h3>List all the Authors</h3></a>
+        <a href = '/updateauthor'><h3>Update an author's details</h3></a>
+    <h1>
+        List of Authors
+    </h1>
+    </br>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Date of Birth</th>
+                <th>Address</th>
+                <th>Number of books</th>  
+            </tr>
+            <% for ( let i =0; i< data.length;i++){ %>
+                <tr>
+                    <td >
+                        <%= data[i]._id %>
+                    </td>
+                    <td >
+                        <%= data[i].name.firstName %>
+                    </td>
+                    <td>
+                        <%= data[i].name.lastName %>
+                    </td>
+                    <td>
+                        <%= data[i].dateOfBirth.getDate() %>-<%= data[i].dateOfBirth.getMonth()+1%>-<%= data[i].dateOfBirth.getFullYear() %>
+                    </td>
+                    <td>
+                        <%= data[i].address.unit %> <%= data[i].address.street %> <%= data[i].address.suburb %> <%= data[i].address.state %>
+                    </td>
+                    <td>
+                        <%= data[i].numBooks %>
+                    </td>
+                </tr>
+                <% }%>
+     </table>
+    </h3>
+</body>
+</html>

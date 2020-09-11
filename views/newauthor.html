@@ -1,0 +1,37 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href = '/'><h3>Home</h3></a>
+    <a href = '/newbook'><h3>Add new book</h3></a> 
+        <a href = '/getbooks'><h3>List all the books</h3></a>
+        <a href = '/updatebook'><h3>Update a book's properties</h3></a>
+        <a href = '/deletebook'><h3>Delete a book using it's ISBN</h3></a>
+        <a href = '/newauthor'><h3>Add a new author</h3></a>
+        <a href = '/getauthors'><h3>List all the Authors</h3></a>
+        <a href = '/updateauthor'><h3>Update an author's details</h3></a>
+    <form action="/newauthor" method="POST">
+        <label>First name: </label> <br>
+        <input type="text" placeholder="Enter the first name here" name="firstName" /> </br>
+        <label>Last name: </label> <br>
+        <input type="text" placeholder="Enter the last name here" name="lastName" /> </br>
+        <label>Date of birth: </label> <br>
+        <input type="date" placeholder="Enter the date of birth here" name="dob" /> </br>
+        <label>Address: </label> <br>
+        <label> Unit: </label> <br>
+        <input type="text" placeholder="Enter the unit here" name="unit" /> </br>
+        <label> Street: </label> <br>
+        <input type="text" placeholder="Enter the street here" name="street" /> </br>
+        <label> Suburb: </label> <br>
+        <input type="text" placeholder="Enter the suburb here" name="suburb" /> </br>
+        <label> State: </label> <br>
+        <input type="text" placeholder="Enter the unit here" name="state" /> </br>
+        <label>Number of books: </label> <br>
+        <input type="number" placeholder="Enter the first name here" name="numBooks" /> </br>
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>

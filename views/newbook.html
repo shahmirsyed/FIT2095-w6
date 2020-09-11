@@ -1,0 +1,28 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href = '/'><h3>Home</h3></a>
+    <a href = '/newbook'><h3>Add new book</h3></a> 
+        <a href = '/getbooks'><h3>List all the books</h3></a>
+        <a href = '/updatebook'><h3>Update a book's properties</h3></a>
+        <a href = '/deletebook'><h3>Delete a book using it's ISBN</h3></a>
+        <a href = '/newauthor'><h3>Add a new author</h3></a>
+        <a href = '/getauthors'><h3>List all the Authors</h3></a>
+        <a href = '/updateauthor'><h3>Update an author's details</h3></a>
+    <form action="/newbook" method="POST">
+        <label>title: </label>
+        <input type="text" placeholder="Enter the title here" name="title" /> </br>
+        <label>Date of publication: </label>
+        <input type="date" placeholder="Enter your date here" name="dop" /> </br>
+        <label>Author: </label>
+        <input type="text" placeholder="Enter the author's name here" name="author" /> </br>
+        <label>Summary: </label>
+        <input type="text" placeholder="Enter your summary here" name="summary" /> </br>
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>
