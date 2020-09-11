@@ -145,15 +145,27 @@ mongoose.connect(url, {useNewUrlParser: true}, function (err){
     app.post('/deletebook', function(req, res){
         let bookDetails = req.body;
         let filter = { isbn: bookDetails.isbn };
-        Book.deleteOne(filter);
-        res.redirect('/getbooks');
+        Book.deleteOne(filter, function(err, docs){
+            if (err){
+                res.render("invalid-data",{msg: "Books isbn provided is invalid."});
+            }
+            else{
+                res.redirect('/getbooks');
+            }
+        });
     })
 
     app.get('/delete-by-isbn/:isbn', function(req, res){
         let filter = {isbn: req.params.isbn};
-        Book.deleteOne(filter);
-        res.send("The book with isbn " + req.params.isbn + " has been deleted");
-        res.redirect('/getbooks');
+        Book.deleteOne(filter, function(err, docs){
+            if (err){
+                res.render("invalid-data",{msg: "Books isbn provided is invalid."});
+            }
+            else{
+                res.redirect('/getbooks');
+            }
+        });
+        
     })
 
     app.get('/newauthor', function(req,res){
